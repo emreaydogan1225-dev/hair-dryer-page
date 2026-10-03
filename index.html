@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiet High-Speed Hair Dryer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7fc;--card:#fff;--ink:#1e1530;--mute:#6a6178;--line:#e6dfee;--acc:#b0178f;--acc2:#8a0f71;--soft:#f1e7f6;--ok:#17803d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150f20;--card:#1f1730;--ink:#f5eefb;--mute:#aa9fbb;--line:#392b50;--acc:#e052c2;--acc2:#c43ba6;--soft:#2a1e40;--ok:#4ade80}}
+:root[data-theme="dark"]{--bg:#150f20;--card:#1f1730;--ink:#f5eefb;--mute:#aa9fbb;--line:#392b50;--acc:#e052c2;--acc2:#c43ba6;--soft:#2a1e40;--ok:#4ade80}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.bar{background:var(--ink);color:var(--bg);text-align:center;font-size:14px;padding:9px 12px}
+.hero{display:grid;gap:32px;padding:28px 0 48px}
+@media(min-width:820px){.hero{grid-template-columns:1.05fr 1fr;align-items:start;gap:56px;padding-top:44px}}
+.stage{background:var(--soft);border-radius:22px;aspect-ratio:1/1;display:grid;place-items:center;position:relative;overflow:hidden}
+.stage svg{width:78%;height:auto;transition:transform .35s}
+.stage .tag{position:absolute;left:14px;bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
+.stars{color:#f5a524;letter-spacing:2px}
+.rate{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--mute);margin:12px 0 18px}
+.rate b{color:var(--ink)}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800}
+.sub{font-size:18px;color:var(--mute);margin:14px 0 20px;max-width:46ch}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price .now{font:800 40px "Bricolage Grotesque",system-ui,sans-serif}
+.price s{color:var(--mute)}
+.save{background:var(--acc);color:#fff;border-radius:6px;padding:3px 9px;font-size:13px;font-weight:700}
+.tax{font-size:13px;color:var(--mute);margin:4px 0 22px}
+.opt{margin-bottom:18px}
+.opt .lab{font-weight:700;margin-bottom:8px}
+.opt .lab span{font-weight:500;color:var(--mute)}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{appearance:none;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:10px 18px;font:600 15px inherit;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:46px}
+.chip[aria-pressed="true"]{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 22%,transparent)}
+.dot{width:16px;height:16px;border-radius:50%;border:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.buy{display:flex;gap:10px;margin:24px 0 16px}
+.qty{display:flex;border:2px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+.qty button{appearance:none;border:0;background:none;color:var(--ink);width:42px;font-size:20px;cursor:pointer}
+.qty output{min-width:30px;display:grid;place-items:center;font-weight:700}
+.cta{flex:1;appearance:none;border:0;background:var(--acc);color:#fff;font:700 17px inherit;font-family:inherit;border-radius:12px;padding:15px 20px;cursor:pointer;min-height:54px;transition:background .2s,transform .1s}
+.cta:hover{background:var(--acc2)}.cta:active{transform:scale(.98)}
+.cta.done{background:var(--ok)}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px;margin:0;padding:0;list-style:none}
+.trust li{display:flex;gap:8px;align-items:flex-start}
+.trust i{color:var(--ok);font-style:normal;font-weight:800}
+.note{margin-top:14px;font-size:13px;color:var(--mute);background:var(--soft);border-radius:10px;padding:10px 12px}
+section.s{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);font-weight:800;margin-bottom:12px}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 28px}
+.feat{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.feat div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.feat h3{font-size:20px;margin-bottom:6px}
+.feat p{margin:0;color:var(--mute)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;background:var(--card);border-radius:16px;overflow:hidden}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:17px}
+td:nth-child(2),th:nth-child(2){background:var(--soft);font-weight:600}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--mute)}
+.final{background:var(--ink);color:var(--bg);border-radius:24px;padding:40px 24px;text-align:center;margin:20px 0 56px}
+.final h2{color:var(--bg)}
+.final p{opacity:.8;margin:0 auto 22px;max-width:44ch}
+.final .cta{max-width:340px;flex:none;width:100%}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:0 0 100px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;transform:translateY(110%);transition:transform .25s;z-index:5}
+.sticky.show{transform:none}
+.sticky b{font:800 20px "Bricolage Grotesque",system-ui,sans-serif}
+.sticky .cta{padding:12px;min-height:46px}
+@media(min-width:820px){.sticky{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bar">Free shipping on every order</div>
+
+<main class="wrap">
+<div class="hero">
+  <div class="stage" aria-label="Product preview">
+    <svg id="dryer" viewBox="0 0 220 260" role="img" aria-label="Hair dryer illustration">
+      <defs>
+        <linearGradient id="bd" x1="0" x2="1"><stop offset="0" id="g1" stop-color="#6b6672"/><stop offset="1" id="g2" stop-color="#3f3b47"/></linearGradient>
+      </defs>
+      <ellipse cx="110" cy="248" rx="46" ry="6" fill="#000" opacity=".12"/>
+      <rect x="98" y="108" width="26" height="136" rx="13" fill="url(#bd)"/>
+      <rect x="76" y="20" width="118" height="92" rx="46" fill="url(#bd)"/>
+      <ellipse cx="82" cy="66" rx="22" ry="48" fill="#2a2631"/>
+      <ellipse cx="82" cy="66" rx="22" ry="48" fill="none" id="ring" stroke="#c026a8" stroke-width="7"/>
+      <g stroke="#555" stroke-width="1.5" opacity=".7"><path d="M68 40v52M76 34v64M84 32v68M92 34v64"/></g>
+      <rect x="132" y="120" width="8" height="22" rx="4" id="btn" fill="#c026a8"/>
+    </svg>
+    <span class="tag" id="tag">Cold + hot airflow</span>
+  </div>
+
+  <div>
+    <h1>Salon-style drying, quietly done at home</h1>
+    <div class="rate"><span class="stars" aria-hidden="true">★★★★☆</span><b>4.1</b> from 294 reviews <span>·</span> 1,000+ sold</div>
+    <p class="sub">A high-speed hair dryer with hot and cold air and negative ion output, built to dry quickly without the usual roar.</p>
+    <div class="price"><span class="now" id="price">$13.14</span><s id="was">$61.42</s><span class="save" id="save">Save $48.28</span></div>
+    <p class="tax">Taxes excluded. Added at checkout if applicable.</p>
+
+    <div class="opt"><div class="lab">Color: <span id="cname">Gray</span></div>
+      <div class="chips" id="colors">
+        <button class="chip" aria-pressed="true" data-c="Gray"><i class="dot" style="background:#4d4955"></i>Gray</button>
+        <button class="chip" aria-pressed="false" data-c="White &amp; gold"><i class="dot" style="background:linear-gradient(135deg,#fff 50%,#d4a93c 50%)"></i>White &amp; gold</button>
+      </div></div>
+    <div class="opt"><div class="lab">Plug type: <span id="pname">UK</span></div>
+      <div class="chips" id="plugs">
+        <button class="chip" aria-pressed="false" data-p="EU">EU</button>
+        <button class="chip" aria-pressed="true" data-p="UK">UK</button>
+        <button class="chip" aria-pressed="false" data-p="AU">AU</button>
+      </div></div>
+
+    <div class="buy">
+      <div class="qty"><button type="button" id="minus" aria-label="Decrease quantity">−</button><output id="q">1</output><button type="button" id="plus" aria-label="Increase quantity">+</button></div>
+      <button class="cta" id="add" type="button">Add to cart</button>
+    </div>
+    <ul class="trust">
+      <li><i>✓</i>Free shipping</li>
+      <li><i>✓</i>Delivery in about 2 weeks</li>
+      <li><i>✓</i>Refund if the package is lost</li>
+      <li><i>✓</i>Refund if the item arrives damaged</li>
+    </ul>
+    <p class="note">Check that the plug type and voltage match your outlets before ordering.</p>
+  </div>
+</div>
+
+<section class="s">
+  <h2>Why people pick this dryer</h2>
+  <p class="lead">Three things matter in a hair dryer: how fast it dries, how loud it is, and how your hair feels afterward.</p>
+  <div class="feat">
+    <div><h3>High-speed airflow</h3><p>A high-power motor pushes a strong, focused stream so you spend less time with the dryer in your hand.</p></div>
+    <div><h3>Ultra-quiet design</h3><p>Built to run quieter than a standard dryer, so it suits early mornings, shared homes and salon floors.</p></div>
+    <div><h3>Negative ion output</h3><p>Ion technology is designed to reduce static and frizz so hair looks smoother.</p></div>
+    <div><h3>Hot and cold air</h3><p>Dry with heat, then switch to cool air to set your style in place.</p></div>
+    <div><h3>Two colors</h3><p>Choose gray with a violet accent, or white with gold trim.</p></div>
+    <div><h3>Home or salon</h3><p>Compact enough for everyday use and powerful enough for professional work.</p></div>
+  </div>
+</section>
+
+<section class="s">
+  <h2>How it compares</h2>
+  <p class="lead">Edit these rows to match the exact specs on your supplier's data sheet.</p>
+  <div class="tbl"><table>
+    <tr><th></th><th>This dryer</th><th>Typical budget dryer</th></tr>
+    <tr><td>Airflow</td><td>High-speed</td><td>Standard</td></tr>
+    <tr><td>Noise</td><td>Ultra-quiet design</td><td>Loud</td></tr>
+    <tr><td>Static control</td><td>Negative ion</td><td>Usually none</td></tr>
+    <tr><td>Cold shot</td><td>Yes</td><td>Sometimes</td></tr>
+    <tr><td>Shipping</td><td>Free</td><td>Varies</td></tr>
+  </table></div>
+</section>
+
+<section class="s">
+  <h2>Questions before you buy</h2>
+  <details><summary>How long does delivery take?</summary><p>Delivery is estimated at about two weeks, and shipping is free.</p></details>
+  <details><summary>Which plug do I need?</summary><p>Pick EU, UK or AU at the top of the page to match your wall outlet. If your outlet is a different type, use a certified adapter and check that the dryer's voltage range suits your country.</p></details>
+  <details><summary>What if it arrives damaged or never shows up?</summary><p>You get a refund if the package is lost or the item arrives damaged.</p></details>
+  <details><summary>Does it have a cold setting?</summary><p>Yes. It offers both hot and cold air.</p></details>
+</section>
+
+<div class="final">
+  <h2>Ready for faster, quieter drying?</h2>
+  <p>Free shipping, with a refund if your order is lost or damaged.</p>
+  <button class="cta" type="button" id="add2">Add to cart</button>
+</div>
+</main>
+<footer>© Your Store · Shipping · Returns · Contact</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <b id="sp">$13.14</b><button class="cta" type="button" id="add3">Add to cart</button>
+</div>
+
+<script>
+(function(){
+  var CONFIG={price:13.14,compareAt:61.42,currency:"$"};
+  var fmt=function(n){return CONFIG.currency+n.toFixed(2)};
+  var qty=1,color="Gray",plug="UK";
+  var $=function(id){return document.getElementById(id)};
+  function render(){
+    $("price").textContent=fmt(CONFIG.price);$("was").textContent=fmt(CONFIG.compareAt);
+    $("save").textContent="Save "+fmt(CONFIG.compareAt-CONFIG.price);$("sp").textContent=fmt(CONFIG.price*qty);
+    $("q").textContent=qty;$("cname").textContent=color;$("pname").textContent=plug;
+  }
+  function group(id,key){
+    $(id).addEventListener("click",function(e){
+      var b=e.target.closest("button");if(!b)return;
+      this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+      b.setAttribute("aria-pressed","true");
+      if(key==="c"){color=b.dataset.c.replace("&amp;","&");skin(color)}else plug=b.dataset.p;
+      render();
+    });
+  }
+  function skin(c){
+    var w=c.indexOf("White")===0;
+    $("g1").setAttribute("stop-color",w?"#ffffff":"#6b6672");$("g2").setAttribute("stop-color",w?"#e4e0e8":"#3f3b47");
+    $("ring").setAttribute("stroke",w?"#d4a93c":"#c026a8");$("btn").setAttribute("fill",w?"#d4a93c":"#c026a8");
+    $("dryer").style.transform="rotate(-3deg) scale(1.03)";setTimeout(function(){$("dryer").style.transform=""},350);
+  }
+  group("colors","c");group("plugs","p");
+  $("minus").onclick=function(){qty=Math.max(1,qty-1);render()};
+  $("plus").onclick=function(){qty=Math.min(10,qty+1);render()};
+  function add(){
+    var order={color:color,plug:plug,qty:qty};
+    /* Wire this to your checkout (Shopify, Stripe, etc.) using `order`. */
+    ["add","add2","add3"].forEach(function(id){var b=$(id);b.textContent="Added to cart";b.classList.add("done");
+      setTimeout(function(){b.textContent="Add to cart";b.classList.remove("done")},1800)});
+  }
+  ["add","add2","add3"].forEach(function(id){$(id).addEventListener("click",add)});
+  var st=$("sticky"),main=$("add");
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){var vis=en[0].isIntersecting;st.classList.toggle("show",!vis);st.setAttribute("aria-hidden",vis)},{threshold:0}).observe(main);
+  }
+  render();
+})();
+</script>
+</body>
+</html>
